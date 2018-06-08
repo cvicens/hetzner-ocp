@@ -6,7 +6,7 @@ guests:
   virt_hypervisor: hvm
   network: bridge=virbr0
   os_type: linux
-  os_variant: rhel7.4
+  os_variant: rhel7.5
   disk_os_size: 40g
   disk_data_size: 200g
 - name: master01
@@ -16,7 +16,7 @@ guests:
   virt_hypervisor: hvm
   network: bridge=virbr0
   os_type: linux
-  os_variant: rhel7.4
+  os_variant: rhel7.5
   disk_os_size: 40g
   disk_data_size: 100g
 - name: infranode01
@@ -26,7 +26,7 @@ guests:
   virt_hypervisor: hvm
   network: bridge=virbr0
   os_type: linux
-  os_variant: rhel7.4
+  os_variant: rhel7.5
   disk_os_size: 40g
   disk_data_size: 100g
 - name: node01
@@ -36,7 +36,7 @@ guests:
   virt_hypervisor: hvm
   network: bridge=virbr0
   os_type: linux
-  os_variant: rhel7.4
+  os_variant: rhel7.5
   disk_os_size: 40g
   disk_data_size: 100g
 - name: node02
@@ -46,7 +46,7 @@ guests:
   virt_hypervisor: hvm
   network: bridge=virbr0
   os_type: linux
-  os_variant: rhel7.4
+  os_variant: rhel7.5
   disk_os_size: 40g
   disk_data_size: 100g
 - name: node03
@@ -56,6 +56,6 @@ guests:
   virt_hypervisor: hvm
   network: bridge=virbr0
   os_type: linux
-  os_variant: rhel7.4
+  os_variant: rhel7.5
   disk_os_size: 40g
   disk_data_size: 100g

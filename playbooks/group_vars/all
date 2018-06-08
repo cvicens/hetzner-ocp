@@ -19,7 +19,7 @@ repos:
 - "rhel-7-server-ose-{{ocp_version}}-rpms"
 - rhel-7-fast-datapath-rpms
 - rhel-7-server-optional-rpms
-rhel_image: rhel-kvm.qcow2
+rhel_image: rhel-75-kvm.qcow2
 volume_group: vg0
 default_password: password
 remote_user: cloud-user
