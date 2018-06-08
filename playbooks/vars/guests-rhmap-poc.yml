@@ -7,7 +7,7 @@ guests:
   network: bridge=virbr0
   os_type: linux
   os_variant: rhel7.5
-  disk_os_size: 40g
+  disk_os_size: 35g
   disk_data_size: 200g
 - name: master01
   cpu: 1
@@ -17,8 +17,8 @@ guests:
   network: bridge=virbr0
   os_type: linux
   os_variant: rhel7.5
-  disk_os_size: 40g
-  disk_data_size: 100g
+  disk_os_size: 35g
+  disk_data_size: 80g
 - name: infranode01
   cpu: 1
   mem: 8192
@@ -27,8 +27,8 @@ guests:
   network: bridge=virbr0
   os_type: linux
   os_variant: rhel7.5
-  disk_os_size: 40g
-  disk_data_size: 100g
+  disk_os_size: 35g
+  disk_data_size: 80g
 - name: node01
   cpu: 1
   mem: 16384
@@ -37,8 +37,8 @@ guests:
   network: bridge=virbr0
   os_type: linux
   os_variant: rhel7.5
-  disk_os_size: 40g
-  disk_data_size: 100g
+  disk_os_size: 35g
+  disk_data_size: 80g
 - name: node02
   cpu: 1
   mem: 16384
@@ -47,8 +47,8 @@ guests:
   network: bridge=virbr0
   os_type: linux
   os_variant: rhel7.5
-  disk_os_size: 40g
-  disk_data_size: 100g
+  disk_os_size: 35g
+  disk_data_size: 80g
 - name: node03
   cpu: 1
   mem: 16384
@@ -57,5 +57,5 @@ guests:
   network: bridge=virbr0
   os_type: linux
   os_variant: rhel7.5
-  disk_os_size: 40g
-  disk_data_size: 100g
+  disk_os_size: 35g
+  disk_data_size: 80g
