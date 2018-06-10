@@ -90,8 +90,8 @@
     with_items: "{{packages_bastion}}"
   - name: Copy playbooks to bastion
     synchronize:
-      src: ./playbooks
-      dest: /tmp/
+      src: ./playbooks/
+      dest: /home/cloud-user/playbooks
       recursive: yes
   - name: Copy SSH keys from host to bastion
     copy:
@@ -131,9 +131,9 @@
   vars_files:
   - vars/guests.yml
   tasks:
-  - name: Wait 10 secs for guests to shutdown
+  - name: Wait 20 seconds for guests to shutdown
     pause:
-      seconds: 10
+      seconds: 20
   - name: Start all VMs
     virt:
       command: start
