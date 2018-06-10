@@ -91,7 +91,8 @@
   - name: Copy playbooks to bastion
     synchronize:
       src: ./playbooks
-      dest: /root/
+      dest: /tmp/
+      recursive: yes
   - name: Copy SSH keys from host to bastion
     copy:
       src: "{{item.src}}"
