@@ -93,13 +93,13 @@
     retries: 5
     delay: 5
     with_items: "{{packages_bastion}}"
-  - name: Copy playbooks to bastion
-    synchronize:
-      src: ./playbooks/
-      dest: /home/cloud-user/playbooks
-      recursive: yes
-      rsync_opts:
-        - "--exclude=~cloud-user"
+#  - name: Copy playbooks to bastion
+#    synchronize:
+#      src: ./playbooks/
+#      dest: /home/cloud-user/playbooks
+#      recursive: yes
+#      rsync_opts:
+#        - "--exclude=~cloud-user"
   - name: Copy SSH keys from host to bastion
     copy:
       src: "{{item.src}}"
