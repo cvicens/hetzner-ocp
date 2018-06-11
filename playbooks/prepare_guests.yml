@@ -71,7 +71,6 @@
     with_items: "{{repos}}"
   - name: Disable undesired repos
     command: "yum-config-manager --disable {{item}}"
-    when: subscribe.changed
     retries: 5
     delay: 5
     with_items: "{{repos_to_disable}}"
