@@ -13,6 +13,7 @@ packages:
 packages_bastion:
 - atomic-openshift-utils
 - atomic-openshift-clients
+- ansible
 repos:
 - rhel-7-server-rpms
 - rhel-7-server-extras-rpms

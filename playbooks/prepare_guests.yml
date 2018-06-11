@@ -119,11 +119,11 @@
     yum:
       name: '*'
       state: latest
-  - name: Shutdown
-    shell: sleep 2 && reboot
-    async: 1
-    poll: 0
-    ignore_errors: true
+#  - name: Shutdown
+#    shell: sleep 2 && reboot
+#    async: 1
+#    poll: 0
+#    ignore_errors: true
 
 - name: Restart all guest
   hosts: localhost
@@ -131,6 +131,11 @@
   vars_files:
   - vars/guests.yml
   tasks:
+  - name: Stop all VMs
+    virt:
+      command: shutdown
+      name: "{{item.name}}"
+    with_items: "{{guests}}"
   - name: Wait 60 seconds for guests to shutdown
     pause:
       seconds: 60
