@@ -20,6 +20,8 @@ repos:
 - "rhel-7-server-ose-{{ocp_version}}-rpms"
 - rhel-7-fast-datapath-rpms
 - rhel-7-server-optional-rpms
+repos_to_disable:
+- rhel-7-server-htb-rpms
 rhel_image: rhel-75-kvm.qcow2
 volume_group: vg0
 default_password: password

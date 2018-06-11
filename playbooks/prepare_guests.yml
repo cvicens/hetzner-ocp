@@ -69,6 +69,12 @@
     retries: 5
     delay: 5
     with_items: "{{repos}}"
+  - name: Disable undesired repos
+    command: "yum-config-manager --disable {{item}}"
+    when: subscribe.changed
+    retries: 5
+    delay: 5
+    with_items: "{{repos_to_disable}}"
   - name: Ensure that required packages are present on target hosts
     yum:
       name: "{{item}}"
@@ -154,7 +160,7 @@
       module: wait_for
       host: "{{ inventory_hostname }}"
       port: 22
-      delay: 5
+      delay: 30
       timeout: 300
 
 - name: Create inventory
