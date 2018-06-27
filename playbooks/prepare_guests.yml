@@ -169,6 +169,8 @@
   tasks:
   vars:
     ip_addr: "{{hostvars['localhost']['ansible_default_ipv4']['address']}}"
+  vars_files:
+  - vars/guests.yml
   roles:
   - { role: inventory}
 - name: install and setup docker

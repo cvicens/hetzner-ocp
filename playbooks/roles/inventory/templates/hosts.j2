@@ -139,11 +139,11 @@ bastion
 
 {% for guest in guests %}
 
-{% if guest.type is master %}
+{% if guest.type == 'master' %}
 {{ guest.name }} openshift_schedulable=false
-{% elif guest.type is infra %}
+{% elif guest.type == 'infra' %}
 {{ guest.name }} openshift_node_labels="{'region':'infra'}"
-{% elif guest.type is node %}
+{% elif guest.type == 'node' %}
 {{ guest.name }} openshift_node_labels="{'purpose':'work'}"
 {% endif %}
 
