@@ -133,12 +133,7 @@ master01
 bastion
 
 [nodes]
-#master01 openshift_schedulable=false
-#infranode01 openshift_node_labels="{'region':'infra'}"
-#node01 openshift_node_labels="{'purpose':'work'}"
-
 {% for guest in guests %}
-
 {% if guest.type == 'master' %}
 {{ guest.name }} openshift_schedulable=false
 {% elif guest.type == 'infra' %}
@@ -146,5 +141,4 @@ bastion
 {% elif guest.type == 'node' %}
 {{ guest.name }} openshift_node_labels="{'purpose':'work'}"
 {% endif %}
-
 {% endfor %}

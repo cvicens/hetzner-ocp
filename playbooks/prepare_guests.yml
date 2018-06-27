@@ -167,10 +167,10 @@
 - name: Create inventory
   hosts: bast
   tasks:
-  vars:
-    ip_addr: "{{hostvars['localhost']['ansible_default_ipv4']['address']}}"
   vars_files:
   - vars/guests.yml
+  vars:
+    ip_addr: "{{hostvars['localhost']['ansible_default_ipv4']['address']}}"
   roles:
   - { role: inventory}
 - name: install and setup docker
