@@ -62,10 +62,10 @@
       subscription-manager repos --disable=*
     retries: 5
     delay: 5
-    when: subscribe.changed
+    #when: subscribe.changed => if you retry... this won't happen...
   - name: Enable correct repos
     command: "subscription-manager repos --enable={{item}}"
-    when: subscribe.changed
+    #when: subscribe.changed => if you retry... this won't happen...
     retries: 5
     delay: 5
     with_items: "{{repos}}"
