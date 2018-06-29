@@ -26,7 +26,7 @@
       "shell qemu-img create -f raw /var/lib/libvirt/images/bastion-nfs.img {{nfs_size}}"
     when: bastion_nfs_img_result.stat.exists == false
 
-  - name: Add new disk to infranode01 as vdb
+  - name: Add new disk to bastion as vdb
     local_action:
       "shell virsh attach-disk bastion --source /var/lib/libvirt/images/bastion-nfs.img --persistent --target vdb"
     when: disk_attached.rc != 0

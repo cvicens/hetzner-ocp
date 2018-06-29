@@ -34,7 +34,7 @@ guests:
   disk_data_size: 80g
 - name: node01
   type: node
-  cpu: 1
+  cpu: 4
   mem: 16384
   virt_type: kvm
   virt_hypervisor: hvm
